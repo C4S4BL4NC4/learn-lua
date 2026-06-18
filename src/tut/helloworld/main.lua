@@ -39,3 +39,38 @@ print(string.lower("Mystic"))
 print(string.len("Mystic"))
 
 -- +-/*%^
+print(math.pi)
+print(math.min(1,2,3,4,5))
+print(math.max(1,2,3,4,5,6))
+print(math.ceil(2.8))
+print(math.floor(2.9))
+-- math.randomseed(os.time())
+print("Random number = "..math.random(0,10))
+
+-- if statements
+local stat = 2
+
+if x < 5 then
+    print("x is less than 5")
+end
+
+--[[
+if  then
+elseif
+else 
+end
+]]
+
+--[[
+
+and
+or
+not
+<
+>
+>=
+<=
+==
+~=
+
+]]
