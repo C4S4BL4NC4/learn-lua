@@ -56,7 +56,7 @@ end
 
 --[[
 if  then
-elseif
+elseif  then
 else 
 end
 ]]
@@ -72,5 +72,5 @@ not
 <=
 ==
 ~=
-
+59;40
 ]]
