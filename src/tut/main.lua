@@ -177,9 +177,13 @@ end
 -- Custom Modules
 print("\nCustom Modules:")
 
+local mod = require("src.tut.custom")
+mod.sum(1, 2)
+mod.sayHello()
 
 -- Object Oriented Programming
 print("\nOOP:")
+
 
 
 
