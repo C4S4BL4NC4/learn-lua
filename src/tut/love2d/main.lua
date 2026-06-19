@@ -1,36 +1,44 @@
 _G.love = require("love")
 
 function love.load()
-    love.graphics.setBackgroundColor(0.9, 0.9, 1)
+    love.graphics.setBackgroundColor(0, 0, 0)
 
     _G.pacman = {
         x = 200,
         y = 300,
+        color = {1, 1, 0},
+        drawShape = function(self)
+            love.graphics.setColor(unpack(self.color))
+            love.graphics.arc("fill", self.x, self.y, 60, 1, 5)
+        end,
         eat = false,
-        food_x = 300
     }
-    
-    -- pacman.x = 200
-    -- pacman.y = 300
+
+    _G.food = {
+        x = 700,
+        y = pacman.y,
+        color = {1, 0, 0},
+        drawShape = function(self)
+            love.graphics.setColor(unpack(self.color))
+            love.graphics.circle("fill", self.x, self.y, 30)
+        end,
+    }
 
 end
 
 function love.update(dt)
     pacman.x = pacman.x + 1
 
-    if pacman.x >= pacman.food_x + 20 then 
+    if pacman.x >= food.x + 20 then 
         pacman.eat = true
     end
-    love.graphics.print(pacman.x)
 end
 
 function love.draw()
 
     if not pacman.eat then 
-        love.graphics.setColor(1, 0, 0)
-        love.graphics.rectangle("fill", 700, 300, 50, 50)
+        food:drawShape()
     end
     
-    love.graphics.setColor(0, 0, 0)
-    love.graphics.circle("line", pacman.x, pacman.y, 30)
+    pacman:drawShape()
 end
