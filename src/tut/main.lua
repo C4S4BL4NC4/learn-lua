@@ -121,6 +121,7 @@ for index, value in pairs(tbl) do
     print(index, value)
 end
 
+print("\nMatrix:")
 local matrix = {
     {8, 2, 3},
     {5, 6, 1},
@@ -133,4 +134,59 @@ for i = 1, #matrix do
     end
 end
 
+-- Function
+print("\nFunctions:")
+local function addTwo(x, y) 
+    print("add ".. x .. " + " .. y .. " = " .. x + y)
+    return x + y
+end
 
+addTwo(2, 3)
+
+-- IO Stream
+print("\nWorking with files:")
+
+-- io.output("myFile.txt")
+-- io.write("Inside of my text file.") -- close() it
+-- io.close()
+
+io.input("myFile.txt")
+local fileData = io.read("*all")
+-- "*line" "*all"
+print(fileData)
+io.close()
+
+local file = io.open("openFile.txt", "w")
+-- "w" "r" "a"
+if file ~= nil then 
+    file:write("Hello There!")
+    file:close()
+else
+    print("File doesn't exist!")
+end
+
+file = io.open("openFile.txt", "r")
+if file ~= nil then 
+    print(file:read())
+    file:close()
+else
+    print("File doesn't exist!")
+end
+
+
+-- Custom Modules
+print("\nCustom Modules:")
+
+
+-- Object Oriented Programming
+print("\nOOP:")
+
+
+
+-- print("\n:")
+-- print("\n:")
+-- print("\n:")
+-- print("\n:")
+-- print("\n:")
+-- print("\n:")
+-- print("\n:")
