@@ -5,9 +5,10 @@ function love.load()
         x = 400,
         y = 300,
         sprite = {
-            image = love.graphics.newImage("assets/spritesheets/run-spritesheet.png"),
+            image = love.graphics.newImage("assets/spritesheets/male-spritesheet.png"),
             width = 832,
             height = 3456,
+            scale = 1.2,
             QUAD_WIDTH = 64,
             QUAD_HEIGHT = 64
         },
@@ -88,7 +89,7 @@ function love.update(dt)
 end
 
 function love.draw()
-    love.graphics.scale(1.5)
+    love.graphics.scale(character.sprite.scale)
     local current_anim = character.animation[character.animation.current]
     local current_quad = quads[character.animation.current][current_anim.frame]
     love.graphics.draw(character.sprite.image, current_quad, character.x, character.y)
