@@ -184,8 +184,20 @@ mod.sayHello()
 -- Object Oriented Programming
 print("\nOOP:")
 
+local function Pet(name) 
+    return { 
+        name = name or "Animal",
+        age = 4,
+        makeNoise = function() 
+            print(name .. " is making noise")
+        end
+    }
+end
 
+local cat = Pet("Jack")
+local dog = Pet("Ronen")
 
+dog:makeNoise()
 
 -- print("\n:")
 -- print("\n:")
