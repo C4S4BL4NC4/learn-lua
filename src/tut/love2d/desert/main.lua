@@ -30,13 +30,18 @@ function love.load()
                 speed = 0.08,
                 frame = 1,
                 timer = 0
+            },
+            jump = {
+                
             }
+            
         }
     }
 
     quads = {
         idle = {},
-        run = {}
+        run = {},
+        jump = {}
     }
 
     -- Create quads for idle animation
