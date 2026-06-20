@@ -10,7 +10,7 @@ This repository contains various Lua projects and Love2D experiments as I explor
 
 - `src/lua/` - Pure Lua scripts and exercises
 - `src/tut/love2d/` - Love2D game projects and tutorials
-  - `ball/` - Ball physics experiment
+  - `ball/` - Adding ai, buttons, collision detection, and menus experiment
   - `desert/` - Desert-themed game project
   - `playground/` - Miscellaneous Love2D experiments
 
