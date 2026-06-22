@@ -1,3 +1,4 @@
+-- learn collision, implement mouse trace, and add ai enemies.
 _G.love = require("love")
 
 function love.load()
